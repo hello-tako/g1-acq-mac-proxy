@@ -1,0 +1,13 @@
+#!name=G1 ACQ
+#!desc=Maps Google One /ai subscription product IDs on iOS to promotional .acq SKUs (20TB / 30TB AI Ultra) with zero telemetry
+#!system=ios
+
+[Rule]
+# Block QUIC (UDP 443) so the iOS Google App falls back to HTTP/2 and can be decrypted by MITM
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+
+[Script]
+g1-acq = type=http-response,pattern=^https:\/\/one\.google\.com\/ai\?,requires-body=1,max-size=0,script-path=https://cdn.jsdelivr.net/gh/hello-tako/g1-acq-mac-proxy@main/shadowrocket/g1-acq.js
+
+[MITM]
+hostname = %APPEND% one.google.com
