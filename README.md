@@ -2,6 +2,8 @@
 
 **Free macOS & Linux MITM Proxy for Google One (iOS) Promotional SKU Mapping (20TB / 30TB Google AI Ultra — 90% / 75% Off)**
 
+![g1-acq-mac-proxy Banner](assets/twitter-banner.jpg)
+
 > **AI Agent Ready**: Give this repository URL to any AI coding agent (Claude Code, Cursor, Antigravity, Windsurf, Codex) and say *"Run this proxy for my iPhone"*. The agent can follow [`AGENTS.md`](./AGENTS.md) to set up and diagnose everything automatically.
 
 ---
